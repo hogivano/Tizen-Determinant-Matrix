@@ -1,0 +1,214 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+    <meta name="description" content="Tizen Mobile Web Basic Template" />
+
+    <title>Determinant Matrix</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css"/>
+    <link rel="stylesheet" type="text/css" href="css/bulma.css"/>
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/main.js"></script>
+</head>
+
+<body id="style-4">
+    <div class="menu">
+        <img aria-haspopup="true" aria-controls="dropdown-menu3" id="menu" src="images/menu.png" width="30px" height="30px" alt="">
+    </div>
+    <div class="dropdown-menu" id="dropdown-menus" role="menu">
+        <div class="dropdown-content">
+            <a id="about" class="dropdown-item">
+                About
+            </a>
+            <a id="exit" class="dropdown-item">
+                Exit
+            </a>
+        </div>
+    </div>
+    <div id="main">
+        <div class="container is-fluid" style="padding: 20px">
+            <div class="title">
+                <p id="title" style="font-size: 20px; text-align:center">Determinant<br> Matrix</p>
+            </div>
+            <div class="img has-text-centered">
+                <img src="images/imgMatriks.png" width="180px" height="180px" alt="">
+            </div>
+            <div class="btn has-text-centered">
+                <button id="btn2x2" class="button is-info is-outlined" type="submit">2 X 2</button>
+                <button id="btn3x3" class="button is-info is-outlined" type="submit">3 X 3</button>
+                <button id="btn4x4" class="button is-info is-outlined" type="submit">4 X 4</button>
+            </div>
+        </div>
+    </div>
+    <div id="modalExit" class="modal">
+        <div class="modal-background"></div>
+            <div class="modal-card">
+                <section class="modal-card-body">
+                    <p>Are you sure want to exit?</p>
+                    <div class="btnModal has-text-right" style="padding-top: 30px;">
+                        <button id="yesModal" class="button" type="submit">Yes</button>
+                        <button id="noModal" class="button" type="submit">No</button>
+                    </div>
+                </section>
+        </div>
+    </div>
+    <div class="modal" id="modalAbout">
+        <div class="modal-background"></div>
+            <div class="modal-card">
+                <section class="modal-card-body">
+                    <p style="text-align:center; margin-bottom: 20px; font-size: 20px">Determinant Matrix</p>
+                    <p>Author : TryDev</p>
+                    <p>Version : 1.0.0</p>
+                </section>
+        </div>
+    </div>
+    <div id="snackbar">All required!!</div>
+    <div id="main2x2" class="hidden">
+        <div class="container" style="padding:10px; margin-bottom: 30px;">
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="2x2_1" class="in2x2 input" max="6" type="number" name="2x2_1" value="">
+                </div>
+                <div class="column">
+                    <input id="2x2_2" class="in2x2 input" type="number" name="2x2_2" value="">  
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="2x2_3" class="in2x2 input" type="number" name="2x2_3" value="">
+                </div>
+                <div class="column">
+                    <input id="2x2_4" class="in2x2 input" type="number" name="2x2_4" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column has-text-centered">
+                    <button id="submit2x2" class="button button-left is-info"  type="submit">Count</button>
+                    <button id="reset2x2" class="button button-right is-info" type="reset">Reset</button>
+                </div>
+            </div>
+            <div style="text-align:center; font-size: 25px" class="2x2hasil is-grouped-centered">
+                Results
+            </div>
+        </div>
+    </div>
+    <div id="main3x3" class="hidden">
+        <div class="container" style="padding:10px; margin-bottom: 30px;">
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="3x3_1" class="in3x3 input" type="number" name="3x3one" value="">
+                </div>
+                <div class="column">
+                    <input id="3x3_2" class="in3x3 input" type="number" name="3x3two" value="">
+                </div>
+                <div class="column">
+                    <input id="3x3_3" class="in3x3 input" type="number" name="3x3three" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="3x3_4" class="in3x3 input" type="number" name="3x3four" value="">
+                </div>
+                <div class="column">
+                    <input id="3x3_5" class="in3x3 input" type="number" name="3x3five" value="">
+                </div>
+                <div class="column">
+                    <input id="3x3_6" class="in3x3 input" type="number" name="3x3six" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="3x3_7" class="in3x3 input" type="number" name="3x3seven" value="">
+                </div>
+                <div class="column">
+                    <input id="3x3_8" class="in3x3 input" type="number" name="3x3eight" value="">
+                </div>
+                <div class="column">
+                    <input id="3x3_9" class="in3x3 input" type="number" name="3x3nine" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column has-text-centered">
+                    <button class="button button-left is-info" id="submit3x3" type="submit">Count</button>
+                    <button class="button button-right is-info" id="reset3x3" type="reset">Reset</button>    
+                </div>
+            </div>
+            <div style="text-align:center; font-size: 25px" class="3x3hasil is-grouped-centered">
+                Results
+            </div>
+        </div>        
+    </div>
+    <div id="main4x4" class="hidden">
+        <div class="container" style="padding:10px; margin-bottom: 30px;">
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="4x4_1" class="in4x4 input" type="number" name="4x4one" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_2" class="in4x4 input" type="number" name="4x4two" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_3" class="in4x4 input" type="number" name="4x4three" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_4" class="in4x4 input" type="number" name="4x4four" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="4x4_5" class="in4x4 input" type="number" name="4x4five" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_6" class="in4x4 input" type="number" name="4x4six" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_7" class="in4x4 input" type="number" name="4x4seven" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_8" class="in4x4 input" type="number" name="4x4eight" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="4x4_9" class="in4x4 input" type="number" name="4x4nine" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_10" class="in4x4 input" type="number" name="4x4ten" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_11" class="in4x4 input" type="number" name="4x4eleven" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_12" class="in4x4 input" type="number" name="4x4twelve" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column">
+                    <input id="4x4_13" class="in4x4 input" type="number" name="4x4thirdteen" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_14" class="in4x4 input" type="number" name="4x4fourteen" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_15" class="in4x4 input" type="number" name="4x4fiveteen" value="">
+                </div>
+                <div class="column">
+                    <input id="4x4_16" class="in4x4 input" type="number" name="4x4sixteen" value="">
+                </div>
+            </div>
+            <div class="columns is-mobile">
+                <div class="column has-text-centered">
+                    <button class="button button-left is-info" id="submit4x4" type="submit">Count</button>
+                    <button class="button button-right is-info" id="reset4x4" type="reset">Reset</button>
+                </div>
+            </div>    
+            <div style="text-align:center; font-size: 25px" class="4x4hasil is-grouped-centered">
+                Results
+            </div>
+        </div>        
+    </div>
+</body>
+</html>

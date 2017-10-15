@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<widget xmlns="http://www.w3.org/ns/widgets" xmlns:tizen="http://tizen.org/ns/widgets" id="http://yourdomain/DeterminanMatriks" version="1.0.0" viewmodes="maximized">
+    <tizen:application id="C1UKmDr1vL.DeterminanMatriks" package="C1UKmDr1vL" required_version="2.3"/>
+    <author email="ogivano06@gmail.com">TryDev</author>
+    <content src="index.html"/>
+    <description>Application to calculate the determinant of the matrix.</description>
+    <feature name="http://tizen.org/feature/screen.size.all"/>
+    <icon src="icon.png"/>
+    <name>Determinant Matrikx</name>
+    <tizen:profile name="mobile"/>
+</widget>
